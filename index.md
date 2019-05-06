@@ -1,20 +1,12 @@
 ---
 layout: default
-title: Testing
+title: Projects
 ---
 <div class="blurb">
-	<h1>Is this thing on?</h1>
-	<p>Testing, testing, testing?</p>
+	<p>Greetings, wanderer!  I'm Kate, a chemist by training and a data enthusiast by disposition.  I am learning how to wield different tools for data analysis, processing, and visualization.</p>
 	
 </div><!-- /.blurb -->
 
-Look, I made some graphs!
-![Three graphs next to each other](https://radicalprecursor.github.io/Figure_2.png)
+Here's what I've been working on:
 
-I'm including some code!
-
-```python
-def by_location(station, master):
-    loc_data = master[master.NAME == station]
-    return loc_data
-```
+[Analysis of Weather Data](https://radicalprecursor.github.io/weather)
