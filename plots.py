@@ -7,10 +7,16 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
-#url = 'https://raw.githubusercontent.com/RadicalPrecursor/RadicalPrecursor.github.io/master/by_location.csv'
-#df = pd.read_csv(url,sep=",")
+df = pd.read_csv('https://raw.githubusercontent.com/RadicalPrecursor/RadicalPrecursor.github.io/master/by_location.csv')
 
-df = pd.read_csv('/Users/kate/covid-19-MA-data/covid_data/by_location.csv')
+# I'm keeping this commented out for now because I am feeling superstitious
+# I got it to work through Google-fu and trying every suggestion
+# but it's all black magic I understand and trust none of it
+# seriously if stack overflow suggests copying and running some command that
+# summons a literal demon, I'm just going to roll with it in case it fixes my
+# problem
+
+#df = pd.read_csv('/Users/kate/covid-19-MA-data/covid_data/by_location.csv')
 
 # I need to make a function so I'm not copy/pasting forever
 # But I feel too stupid to figure out how it should be set up
