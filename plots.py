@@ -7,6 +7,9 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
+#url = 'https://raw.githubusercontent.com/RadicalPrecursor/RadicalPrecursor.github.io/master/by_location.csv'
+#df = pd.read_csv(url,sep=",")
+
 df = pd.read_csv('/Users/kate/covid-19-MA-data/covid_data/by_location.csv')
 
 # I need to make a function so I'm not copy/pasting forever
@@ -32,7 +35,7 @@ app.layout = html.Div([
             ],
             'layout': dict(
                 xaxis={'title': 'Massachusetts Confirmed COVID-19 Cases'},
-                yaxis={'range': [0, 3000]},
+                yaxis={'range': [0, 5000]},
                 margin={'l': 40, 'b': 40, 't': 10, 'r': 10},
                 legend={'x':0, 'y': 1},
                 hovermode='closest'
@@ -95,7 +98,7 @@ app.layout = html.Div([
             ],
             'layout': dict(
                 xaxis={'title': 'COVID-19 Cases - Suffolk County'},
-                yaxis={'range': [0, 500]},
+                yaxis={'range': [0, 1000]},
                 margin={'l': 40, 'b': 40, 't': 10, 'r': 10},
                 legend={'x':0, 'y': 1},
                 hovermode='closest'
