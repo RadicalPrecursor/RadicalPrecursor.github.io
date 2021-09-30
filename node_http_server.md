@@ -121,8 +121,11 @@ The first line you add is to access another core module, in this case `fs` (for 
 
 The key change here is instead of typing out a string for the server, you're telling it to respond by calling the synchronous `readFileSync()` function on your `index.html` file.  Now your `response` sends the HTML file on to the browser to render out into HTML.
 
-Go ahead and try it!</p>
+Go ahead and try it!
 
 From here you can edit the content of `index.html<` and will be able to see those changes simply by saving the file and refreshing your browser.
 
 Congrats, you have your own personal tiny HTTP server!
+
+
+[Return to main page](https://radicalprecursor.github.io)
