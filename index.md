@@ -3,7 +3,7 @@ layout: default
 title: Projects
 ---
 
-### Greetings, wanderer!  Here's what I've been working on lately:
+### Here's what I've been working on lately:
 
 [How to make the tiniest HTTP server using Node.js](https://radicalprecursor.github.io/node_http_server), a fun exercise I did as I was learning how different pieces fit together in web development.
 
