@@ -7,6 +7,8 @@ title: Projects
 
 [How to make the tiniest HTTP server using Node.js](https://radicalprecursor.github.io/node_http_server), a fun exercise I did as I was learning how different pieces fit together in web development.
 
+[Some notes and Js calculators](https://radicalprecursor.github.io/TTEM_math_helper), a work in progress to accompany the reading of *Theory and Technique of Electronic Music* by Miller Puckette.
+
 
 #### And here are some older projects:
 
