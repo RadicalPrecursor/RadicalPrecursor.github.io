@@ -3,7 +3,7 @@ layout: default
 title: Projects
 ---
 
-<!doctype html>
+
 <html lang="en-us">
     <head>
         <meta charset="utf-8">
