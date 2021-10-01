@@ -1,3 +1,8 @@
+---
+layout: default
+title: Projects
+---
+
 <!doctype html>
 <html lang="en-us">
     <head>
