@@ -125,7 +125,7 @@ title: Theory and Technique of Electronic Music Notes and Math
 
     Real-time frequency may be related to sample rate and angular frequency as:
 
-    \[f = {{\omega R}} \over {2 \pi}}\]
+    \[f = {{\omega R} \over {2 \pi}}\]
 
     where:
     𝑓 is the real-time frequency, corresponding to a pitch, in Hz (or s^(-1))
