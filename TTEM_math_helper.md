@@ -1,4 +1,8 @@
-<!doctype html>
+---
+layout: default
+title: Theory and Technique of Electronic Music Notes and Math
+---
+
 <html lang="en-us">
     <head>
         <meta charset="utf-8">
