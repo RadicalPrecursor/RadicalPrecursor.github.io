@@ -103,13 +103,12 @@ title: Theory and Technique of Electronic Music Notes and Math
 
 
 
-    <h1>Notes</h1>
+### Notes
 
-    <pre>
     A Sinusoid wave can be expressed as:
-    </pre>
+
     \[x[n] = a cos(\omega n + \phi)\]
-    <pre>
+
     where:
     𝑛 is the sample number, an integer
     𝑎 is the amplitude
@@ -117,17 +116,17 @@ title: Theory and Technique of Electronic Music Notes and Math
     𝛷 is the initial phase, which may take values from -1 to 1
 
     Each sample is discrete and unitless, so to produce audio samples must be played at a rate and for a duration:
-    </pre>
+
     \[n = Rt\]
-    <pre>
+
     where:
     𝑅 is the sample rate in Hz (or \(s^{-1}\))
     𝑡 is the time in seconds (s)
 
     Real-time frequency may be related to sample rate and angular frequency as:
-    </pre>
+
     \[f = {{\omega R}} \over {2 \pi}}\]
-    <pre>
+
     where:
     𝑓 is the real-time frequency, corresponding to a pitch, in Hz (or s^(-1))
     2𝜋 is the radians conversion factor to move from angular frequency (𝜔)
@@ -137,9 +136,9 @@ title: Theory and Technique of Electronic Music Notes and Math
     The peak amplitude refers to the maximum sample value within a given window, typically understood as maximum of the absolute value (so if over the window sample values range from -10 to 2, the peak amplitude would be 10.)
 
     Under ordinary conditions we can take peak amplitude A(peak) = 𝑎 and root-mean squared amplitude </pre> \[A_{RMS} = {𝑎 \over \sqrt{2}}\]
-    <pre>
+
     Decibels are logarithmic relative units corresponding to amplitude:
-    </pre>
+
     \[d = 20 \log_{10}{a \over a_0}\]
     𝑑 = 20 log (𝑎/𝑎(0))
 
@@ -150,7 +149,6 @@ title: Theory and Technique of Electronic Music Notes and Math
 
     The typical reference amplitude in digital audio assumes the hardware has a maximum amplitude of 1, and takes 𝑎(0) = 10^(-5) = 0.00001
 
-    </pre>
 
     </body>
 
