@@ -16,5 +16,10 @@ title: Projects
     <h1>Tools</h1>
 
     <h3>𝑓 to MIDI frequency</h3>
+	<p>MIDI pitches are expressed as integers from 0 - 127.  They are calculated as a function of real-time frequency 𝑓 as:
+    \[m = 69 + 12 \log_2({f \over 440})\]
+    </p>
+	    
+    <br>
   </body>
 </html>
