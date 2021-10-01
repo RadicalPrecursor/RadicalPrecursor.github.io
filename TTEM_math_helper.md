@@ -125,7 +125,7 @@ title: Theory and Technique of Electronic Music Notes and Math
 
     Real-time frequency may be related to sample rate and angular frequency as:
 
-    \[f = {{\omega R} \over {2 \pi}}\]
+    \[f = {{\omega R}} \over {2 \pi}}\]
 
     where:
     𝑓 is the real-time frequency, corresponding to a pitch, in Hz (or s^(-1))
@@ -135,7 +135,7 @@ title: Theory and Technique of Electronic Music Notes and Math
 
     The peak amplitude refers to the maximum sample value within a given window, typically understood as maximum of the absolute value (so if over the window sample values range from -10 to 2, the peak amplitude would be 10.)
 
-    Under ordinary conditions we can take peak amplitude A(peak) = 𝑎 and root-mean squared amplitude </pre> \[A_{RMS} = {𝑎 \over \sqrt{2}}\]
+    Under ordinary conditions we can take peak amplitude A(peak) = 𝑎 and root-mean squared amplitude \[A_{RMS} = {𝑎 \over \sqrt{2}}\]
 
     Decibels are logarithmic relative units corresponding to amplitude:
 
@@ -149,7 +149,3 @@ title: Theory and Technique of Electronic Music Notes and Math
 
     The typical reference amplitude in digital audio assumes the hardware has a maximum amplitude of 1, and takes 𝑎(0) = 10^(-5) = 0.00001
 
-
-    </body>
-
-</html>
