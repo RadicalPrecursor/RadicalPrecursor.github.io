@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=520aed8ebec9329f7589bd795a0238a869293e22">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>A Tiny Ultra-minimalist HTTP Server Using Node | Kate’s Hall of Miscellany</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="A Tiny Ultra-minimalist HTTP Server Using Node" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="a gallery of projects and other oddities" />
+<meta property="og:description" content="a gallery of projects and other oddities" />
+<link rel="canonical" href="http://0.0.0.0:4000/node_http_server.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/node_http_server.html" />
+<meta property="og:site_name" content="Kate’s Hall of Miscellany" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Tiny Ultra-minimalist HTTP Server Using Node" />
+<script type="application/ld+json">
+{"@type":"WebPage","description":"a gallery of projects and other oddities","url":"http://0.0.0.0:4000/node_http_server.html","headline":"A Tiny Ultra-minimalist HTTP Server Using Node","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          
+            <a id="forkme_banner" href="https://github.com/RadicalPrecursor/RadicalPrecursor.github.io">View on GitHub</a>
+          
+
+          <h1 id="project_title">Kate's Hall of Miscellany</h1>
+          <h2 id="project_tagline">a gallery of projects and other oddities</h2>
+
+          
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1 id="a-tiny-ultra-minimalist-http-server-using-node">A Tiny Ultra-minimalist HTTP Server Using Node</h1>
+
+<p>This tutorial will assume you know the very basics of working on a command line and how programming languages work.  This tutorial also assumes you have already installed Node.js.  This article will otherwise assume no prior knowledge.  The purpose of this tutorial is to help someone approaching web development as a novice.</p>
+
+<p>This tutorial will use Node.js to build your own private HTTP server and how to start adding features beyond “Hello world.”</p>
+
+<h2 id="schematic-of-the-exercise">Schematic of the Exercise</h2>
+
+<p>You will use the command line to launch an HTTP server, using Node.js.</p>
+
+<p>The two languages you will use today are JavaScript and HTML.  The initialism HTML stands for Hyper Text Markup Language.  You may recognize <code class="language-plaintext highlighter-rouge">.html</code> as a common website extension.
+HTML is a markup language, which is different from a programming language.  Markup languages are not used to execute logic, and are instead used to present media.</p>
+
+<p>JavaScript was developed as a scripting language for browsers.  Until 2009 browsers were the only available way to execute JavaScript, but now Node.js can be used to run it in your terminal.</p>
+
+<p>You will begin by writing a JavaScript program which you will then run with Node.js.  Your script will use core modules provided by Node.js to launch your HTTP server.
+You will then use your script to serve an HTML file.</p>
+
+<h2 id="create-http_serverjs">Create http_server.js</h2>
+
+<p>Create a file called <code class="language-plaintext highlighter-rouge">http_server.js</code> with this text:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Ultra-simple HTTP server</span>
+
+<span class="kd">const</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">http</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span>
+	<span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+		<span class="nx">response</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="p">{</span><span class="dl">"</span><span class="s2">Content-Type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">text/html</span><span class="dl">"</span><span class="p">});</span>
+		<span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="dl">'</span><span class="s1">Hello world</span><span class="dl">'</span><span class="p">);</span>
+		<span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="dl">'</span><span class="s1">Easy peasy.</span><span class="dl">'</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">);</span>
+<span class="kd">const</span> <span class="nx">port</span> <span class="o">=</span> <span class="mi">8080</span><span class="p">;</span>
+<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">port</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Listening! (port </span><span class="p">${</span><span class="nx">port</span><span class="p">}</span><span class="s2">)`</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>In your terminal, navigate to the directory where you created the file above.  Use Node.js to execute the script, as shown below:</p>
+
+<p><code class="language-plaintext highlighter-rouge">$ node http_server.js</code></p>
+
+<p>Your terminal should print the words <code class="language-plaintext highlighter-rouge">Listening! (port 8080)</code> and nothing else.  If you see errors, make sure you read the errors to diagnose the problem. Once running, open your web browser of choice and navigate to http://localhost:8080 .  You should see your tiny web page!</p>
+
+<p>Now let’s walk through what you just did.</p>
+
+<p>Node.js and your browser are communicating using HTTP, a network protocol.  This works just like any other website, except that the communication happens entirely within your own computer.</p>
+
+<p>Lucky you, you do not have to know any details of the network protocol to create your server.  For HTTP there is already a function called <code class="language-plaintext highlighter-rouge">createServer</code> that’s got you covered; all you need to know for this exercise is how to ask it nicely.</p>
+
+<p>In order for the function to be available within your script you must first import the <code class="language-plaintext highlighter-rouge">http</code> core module, which you have done with your first line below the descriptive comment:</p>
+
+<p><code class="language-plaintext highlighter-rouge">const http = require("http");</code></p>
+
+<p>Then we see that <code class="language-plaintext highlighter-rouge">server</code> is instantiated like this:</p>
+
+<p><code class="language-plaintext highlighter-rouge">let server = http.createServer(
+		...
+);</code></p>
+
+<p>Before we dig into the parameters needed by <code class="language-plaintext highlighter-rouge">http.createServer</code>, let’s keep going and see what the script does with <code class="language-plaintext highlighter-rouge">server</code> after it is instantiated.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">port</span> <span class="o">=</span> <span class="mi">8080</span><span class="p">;</span>
+<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">port</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Listening! (port </span><span class="p">${</span><span class="nx">port</span><span class="p">}</span><span class="s2">)`</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>The line where you actually call the <code class="language-plaintext highlighter-rouge">server</code> you give it the instruction to <code class="language-plaintext highlighter-rouge">listen(port)</code> so it will be ready to receive requests at the port specified on the line above.  <code class="language-plaintext highlighter-rouge">8080</code> is one of several that tend to be used by HTTP, but this is your server and you may run it on whichever port you wish. (For technical reasons the available range should be 1024-65535 for most systems.)</p>
+
+<p>As you may have noticed once you run your code it keeps your terminal occupied until you terminate the program with <code class="language-plaintext highlighter-rouge">ctrl-c</code>.  The final line of your program helpfully displays a message in your terminal for you, so you know your program is running and on which port.  Note the use of backticks <code class="language-plaintext highlighter-rouge">`</code> around the string you wish to print; that enables you to use <code class="language-plaintext highlighter-rouge">${port}</code> to have your message adjust if you change ports.</p>
+
+<p>Now let’s come back and look at the arguments you gave <code class="language-plaintext highlighter-rouge">createServer</code> and break down what it’s doing:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span>
+	<span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+		<span class="nx">response</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="p">{</span><span class="dl">"</span><span class="s2">Content-Type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">text/html</span><span class="dl">"</span><span class="p">});</span>
+		<span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="dl">'</span><span class="s1">Hello world</span><span class="dl">'</span><span class="p">);</span>
+		<span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="dl">'</span><span class="s1">Easy peasy.</span><span class="dl">'</span><span class="p">);</span>
+			<span class="p">}</span>
+		<span class="p">);</span>
+</code></pre></div></div>
+
+<p>Within <code class="language-plaintext highlighter-rouge">http.createServer</code> you are actually defining another function in <code class="language-plaintext highlighter-rouge">(request, response) =&gt; {...}</code> that will be executed upon receipt of an HTTP <code class="language-plaintext highlighter-rouge">request</code> and can create/modify a <code class="language-plaintext highlighter-rouge">response</code>.</p>
+
+<p>You called <code class="language-plaintext highlighter-rouge">response.writeHead()</code> with arguments of the HTTP status code (<code class="language-plaintext highlighter-rouge">200</code> is the code for <code class="language-plaintext highlighter-rouge">OK</code>), and an Object containing the header <code class="language-plaintext highlighter-rouge">"Content-Type"</code> which tells the browser requesting your document that it should expect to see HTML.</p>
+
+<p>Your next two calls use two different functions to send data upon a <code class="language-plaintext highlighter-rouge">request</code>.  <code class="language-plaintext highlighter-rouge">response.write()</code> can be called multiple times, in this example it is called once and renders the plain text <code class="language-plaintext highlighter-rouge">Hello world</code>.  <code class="language-plaintext highlighter-rouge">response.end()</code> tells the client requesting the content that no more content is coming after whatever (if anything) is sent along as its argument.  You could reproduce the same content by placing both in <code class="language-plaintext highlighter-rouge">response.write()</code> or both together in <code class="language-plaintext highlighter-rouge">response.end()</code>.  For this exercise it does not make a difference but this becomes important in other contexts. Streaming content, for instance, would need to come as <code class="language-plaintext highlighter-rouge">response.write()</code> arguments.</p>
+
+<p>If you haven’t already, go use your browser to check out your website.  So cute!  You can modify the strings in <code class="language-plaintext highlighter-rouge">response.write()</code> and <code class="language-plaintext highlighter-rouge">response.end()</code> to display different text.  Your changes will not be reflected automatically, to see them you’ll need to save the changes and relaunch your server, then refresh your browser.  Ta-da!</p>
+
+<h2 id="serve-an-html-file">Serve an HTML File</h2>
+
+<p>Now let’s try serving an actual file, and not just a hand-typed string.  If you start wandering into the documentation for Node.js for ideas on how to do this you’ll see all sorts of talk about callback and promises and may get pretty lost.  Those are ways of handling asynchronicity, a very important thing that is beyond the scope of this exercise.  For now we’re going to stick with synchronous construction, which is much simpler.</p>
+
+<p>Create a file <code class="language-plaintext highlighter-rouge">index.html</code> and put whatever you want in it.  If you’ve never written any HTML and aren’t sure what to do, just copy these two lines:</p>
+<pre><code class="language-HTML">&lt;h1&gt;Hello there.&lt;/h1&gt;
+  &lt;p&gt;General Kenobi&lt;/p&gt;
+</code></pre>
+
+<p>Then edit your http_server.js file to:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">http</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span>
+	<span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+		<span class="nx">response</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span>  <span class="p">{</span><span class="dl">'</span><span class="s1">Content-Type</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">text/html</span><span class="dl">'</span><span class="p">});</span>
+		<span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="dl">'</span><span class="s1">index.html</span><span class="dl">'</span><span class="p">));</span>
+	<span class="p">}</span>
+<span class="p">);</span>
+<span class="kd">const</span> <span class="nx">port</span> <span class="o">=</span> <span class="mi">8080</span><span class="p">;</span>
+<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">port</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Listening! (port </span><span class="p">${</span><span class="nx">port</span><span class="p">}</span><span class="s2">)`</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>The first line you add is to access another core module, in this case <code class="language-plaintext highlighter-rouge">fs</code> (for <code class="language-plaintext highlighter-rouge">FileSystem</code>).  To simplify you can delete the <code class="language-plaintext highlighter-rouge">response.write()</code> line entirely, and use your <code class="language-plaintext highlighter-rouge">response.end()</code> to deliver all of your content at once.</p>
+
+<p>The key change here is instead of typing out a string for the server, you’re telling it to respond by calling the synchronous <code class="language-plaintext highlighter-rouge">readFileSync()</code> function on your <code class="language-plaintext highlighter-rouge">index.html</code> file.  Now your <code class="language-plaintext highlighter-rouge">response</code> sends the HTML file on to the browser to render out into HTML.</p>
+
+<p>Go ahead and try it!</p>
+
+<p>From here you can edit the content of <code class="language-plaintext highlighter-rouge">index.html&lt;</code> and will be able to see those changes simply by saving the file and refreshing your browser.</p>
+
+<p>Congrats, you have your own personal tiny HTTP server!</p>
+
+<p><a href="/index">Return to main page</a></p>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        
+        <p class="copyright">Kate's Hall of Miscellany maintained by <a href="https://github.com/RadicalPrecursor">RadicalPrecursor</a></p>
+        
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+  </body>
+</html>

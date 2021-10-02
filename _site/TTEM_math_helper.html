@@ -1,14 +1,66 @@
----
-layout: default
-title: Theory and Technique of Electronic Music Notes and Math
----
+<!DOCTYPE html>
+<html lang="en-US">
 
-<html lang="en-us">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=520aed8ebec9329f7589bd795a0238a869293e22">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Theory and Technique of Electronic Music Notes and Math | Kate’s Hall of Miscellany</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Theory and Technique of Electronic Music Notes and Math" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="a gallery of projects and other oddities" />
+<meta property="og:description" content="a gallery of projects and other oddities" />
+<link rel="canonical" href="http://0.0.0.0:4000/TTEM_math_helper.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/TTEM_math_helper.html" />
+<meta property="og:site_name" content="Kate’s Hall of Miscellany" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Theory and Technique of Electronic Music Notes and Math" />
+<script type="application/ld+json">
+{"@type":"WebPage","description":"a gallery of projects and other oddities","url":"http://0.0.0.0:4000/TTEM_math_helper.html","headline":"Theory and Technique of Electronic Music Notes and Math","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          
+            <a id="forkme_banner" href="https://github.com/RadicalPrecursor/RadicalPrecursor.github.io">View on GitHub</a>
+          
+
+          <h1 id="project_title">Kate's Hall of Miscellany</h1>
+          <h2 id="project_tagline">a gallery of projects and other oddities</h2>
+
+          
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <html lang="en-us">
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
 		<title>Music Math Helper</title>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     </head>
     <body>
@@ -19,14 +71,14 @@ title: Theory and Technique of Electronic Music Notes and Math
     <p>MIDI pitches are expressed as integers from 0 - 127.  They are calculated as a function of real-time frequency 𝑓 as:
     \[m = 69 + 12 \log_2({f \over 440})\]
     </p>
-    <br>
+    <br />
 
     <form onsubmit="return fToMIDI();">
-        Real time frequency, in Hz = <input type="text" id="freqf"/>
-        <br>
-        <input type="submit" value="Convert!"/>
-        <br>
-        MIDI frequency = <input type="text" id="MIDIResult" readonly/>
+        Real time frequency, in Hz = <input type="text" id="freqf" />
+        <br />
+        <input type="submit" value="Convert!" />
+        <br />
+        MIDI frequency = <input type="text" id="MIDIResult" readonly="" />
 
     </form>
 
@@ -42,11 +94,11 @@ title: Theory and Technique of Electronic Music Notes and Math
     <h3>MIDI frequency to 𝑓 </h3>
 
     <form onsubmit="return MIDItof();">
-        MIDI frequency = <input type="text" id="MIDIfreq"/>
-        <br>
-        <input type="submit" value="Convert!"/>
-        <br>
-        Real time frequency, in Hz = <input type="text" id="fResult" readonly/>
+        MIDI frequency = <input type="text" id="MIDIfreq" />
+        <br />
+        <input type="submit" value="Convert!" />
+        <br />
+        Real time frequency, in Hz = <input type="text" id="fResult" readonly="" />
 
     </form>
 
@@ -67,12 +119,12 @@ title: Theory and Technique of Electronic Music Notes and Math
 
     where \(𝑓_i\) is the initial frequency, and \(𝑓_t\) is the frequency with the halfstep relation corresponding to ℎ halfsteps.</p>
     <form onsubmit="return transposeFreq();">
-        initial frequency, in Hz = <input type="text" id="initialFreq"/>
-        number of halfsteps = <input type="text" id="halfsteps"/>
-        <br>
-        <input type="submit" value="Convert!"/>
-        <br>
-        transposed frequency, in Hz = <input type="text" id="transpResult" readonly/>
+        initial frequency, in Hz = <input type="text" id="initialFreq" />
+        number of halfsteps = <input type="text" id="halfsteps" />
+        <br />
+        <input type="submit" value="Convert!" />
+        <br />
+        transposed frequency, in Hz = <input type="text" id="transpResult" readonly="" />
 
     </form>
 
@@ -125,7 +177,7 @@ title: Theory and Technique of Electronic Music Notes and Math
 
     Real-time frequency may be related to sample rate and angular frequency as:
 
-    {% raw %}\[f = {{\omega R} \over {2 \pi}}\]{% endraw %}
+    \[f = {{\omega R} \over {2 \pi}}\]
 
     where:
     𝑓 is the real-time frequency, corresponding to a pitch, in Hz (or s^(-1))
@@ -151,3 +203,19 @@ title: Theory and Technique of Electronic Music Notes and Math
 
 [Return to main page](/index)
 
+</p></body></html>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        
+        <p class="copyright">Kate's Hall of Miscellany maintained by <a href="https://github.com/RadicalPrecursor">RadicalPrecursor</a></p>
+        
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
