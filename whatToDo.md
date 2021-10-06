@@ -1,14 +1,15 @@
 ---
-layout: default
-title: So you're feeling executive dysfuntion...
+layout: post
+title: "So you're feeling executive dysfuntion..."
 dependencies:
-    - p5
+  - p5
 ---
 
-### Hmmm
+## Haaaaaaaalp
 
 <div id="scatter">
     <script type="text/javascript" src="eDys.js"></script>
 </div>
 
-What to do?
+I finally got it.
+
