@@ -5,14 +5,13 @@ dependencies:
     - p5
 ---
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Rest a Bit</title>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
-  </head>
-  <body>
-    <p>What to do?</p>
+### Hmmm
+
+<div id="scatter">
+    <script type="text/javascript" src="eDys.js"></script>
+</div>
+
+What to do?
 
     <script>
 let font,
