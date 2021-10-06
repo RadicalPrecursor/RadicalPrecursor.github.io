@@ -61,7 +61,7 @@ let particles = [];
 let desks = [];
 
 function setup() {
-  createCanvas(360, 360, WEBGL);
+  canvas = createCanvas(360, 360, WEBGL);
   canvas.parent('scatter');
   frameRate(5);
   rectMode(CENTER);
