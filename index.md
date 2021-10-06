@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Projects
+dependencies:
+    - p5
 ---
 
 ### Here's what I've been working on lately:

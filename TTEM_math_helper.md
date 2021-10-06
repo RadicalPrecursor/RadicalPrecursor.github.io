@@ -9,25 +9,20 @@ title: Theory and Technique of Electronic Music Notes and Math
 		<title>Music Math Helper</title>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
     </head>
     <body>
     <h1>Tools</h1>
-
     <h3>𝑓 to MIDI frequency</h3>
-
     <p>MIDI pitches are expressed as integers from 0 - 127.  They are calculated as a function of real-time frequency 𝑓 as:
     \[m = 69 + 12 \log_2({f \over 440})\]
     </p>
     <br>
-
     <form onsubmit="return fToMIDI();">
         Real time frequency, in Hz = <input type="text" id="freqf"/>
         <br>
         <input type="submit" value="Convert!"/>
         <br>
         MIDI frequency = <input type="text" id="MIDIResult" readonly/>
-
     </form>
 
     <script>
@@ -68,6 +63,7 @@ title: Theory and Technique of Electronic Music Notes and Math
     where \(𝑓_i\) is the initial frequency, and \(𝑓_t\) is the frequency with the halfstep relation corresponding to ℎ halfsteps.</p>
     <form onsubmit="return transposeFreq();">
         initial frequency, in Hz = <input type="text" id="initialFreq"/>
+        <br>
         number of halfsteps = <input type="text" id="halfsteps"/>
         <br>
         <input type="submit" value="Convert!"/>
@@ -100,10 +96,7 @@ title: Theory and Technique of Electronic Music Notes and Math
     <p>The sample rate 𝑅 is typically standardized to 44100 samples/s.</p>
 
 
-
-
-
-### Notes
+    <h1>Notes</h1>
 
     A Sinusoid wave can be expressed as:
 
