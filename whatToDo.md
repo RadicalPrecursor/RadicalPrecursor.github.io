@@ -5,15 +5,9 @@ dependencies:
     - p5
 ---
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Rest a Bit</title>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
-  </head>
-  <body>
-    <p>What to do?</p>
+### Hmmm
 
+<<<<<<< HEAD
     <script>
 let font,
   fontsize =16;
@@ -125,4 +119,10 @@ function mousePressed() {
     </script>
     <p>Hmm.</p>
   </body>
+=======
+<div id="scatter">
+    <script type="text/javascript" src="eDys.js"></script>
+</div>
+>>>>>>> 05d0bf2c23c5afe57501863926e02fb5023744fb
 
+What to do?
