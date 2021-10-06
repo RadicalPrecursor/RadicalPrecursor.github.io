@@ -13,9 +13,7 @@ dependencies:
   </head>
   <body>
     <p>What to do?</p>
-    <div id="scatter">
-      <script type="text/javascript" src="eDys.js"></script>
-    </div>
+
     <script>
 let font,
   fontsize =16;
