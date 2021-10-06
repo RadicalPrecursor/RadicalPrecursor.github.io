@@ -52,7 +52,7 @@ class Particle {
     this.ySpeed = (0,0);
     this.r = random(100, 255);
     this.g = random(100, 255);
-    this.b = random(100, 255);
+    this.b = random((Math.floor(this.g)-30), 255);
   }
   createParticle() {
     noStroke();
