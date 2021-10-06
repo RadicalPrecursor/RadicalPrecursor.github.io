@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="home">
+    <div class="wrapper">
+        {% assign projects = site.projects %}
+        {% for project in projects %}
+            <div class="wrapper">
+                <a href="{{ project.url | relative_url }}">{{ project.title }}
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+
+
+</div>

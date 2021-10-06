@@ -1,3 +1,8 @@
+---
+layout: default
+title: "A Tiny HTTP Server"
+---
+
 # A Tiny Ultra-minimalist HTTP Server Using Node
 
 This tutorial will assume you know the very basics of working on a command line and how programming languages work.  This tutorial also assumes you have already installed Node.js.  This article will otherwise assume no prior knowledge.  The purpose of this tutorial is to help someone approaching web development as a novice.

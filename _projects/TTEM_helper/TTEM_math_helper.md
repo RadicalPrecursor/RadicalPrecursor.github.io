@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Theory and Technique of Electronic Music Notes and Math
+layout: post
+title: "Theory and Technique of Electronic Music Notes and Math"
 ---
 
 <html lang="en-us">
