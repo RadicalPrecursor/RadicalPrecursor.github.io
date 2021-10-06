@@ -1,8 +1,6 @@
 ---
-layout: post
+layout: default
 title: "So you're feeling executive dysfuntion..."
-dependencies:
-  - p5
 ---
 
 ## Haaaaaaaalp
