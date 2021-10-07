@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "A Tiny HTTP Server"
+description: an exercise in using Node.js to launch a tiny personal HTTP server
+date: 2021-10-01
 ---
 
 # A Tiny Ultra-minimalist HTTP Server Using Node
