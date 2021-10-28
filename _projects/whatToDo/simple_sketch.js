@@ -5,7 +5,7 @@ var x = 100,
 
 
 function setup() {
-  canvas = createCanvas(710, 400, WEBGL);
+  canvas = createCanvas(1420, 800, WEBGL);
   canvas.parent('simple-sketch-holder');
 }
 

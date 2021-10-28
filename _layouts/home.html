@@ -7,7 +7,7 @@ layout: default
     <div class="wrapper">
         {% assign projects = site.projects | sort: 'date' | reverse %}
         {% for project in projects %}
-                <a href="{{ project.url | relative_url }}">{{ project.title }}
+                <a color="#FFCFC4" href="{{ project.url | relative_url }}">{{ project.title }}
                 </a>
                 <p>{{ project.description }}</p>
         {% endfor %}

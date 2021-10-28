@@ -58,6 +58,7 @@ var particles = [];
 var desks = [];
 
 function setup() {
+  // edit canvas size here
   canvas = createCanvas(360, 360, WEBGL);
   canvas.parent('scatter');
   frameRate(5);
@@ -86,9 +87,7 @@ function getRandomInt(max) {
 var len = wisdom.length;
 
 function draw() {
-  var c1 = color('hsl(180, 80%, 80%)');
-  var c2 = color('hsl(300, 100%, 90%)');
-  var c3 = color('hsl(240, 90%, 80%)');
+  var c1 = color('#b5d1cc);
   background(c1);
   desks[0].createDesk();
 
