@@ -9,7 +9,7 @@ Sometimes you just need to do everything, and everything is so important and you
 
 ## Take a deep breath
 
-Brush away the clutter
+brush away the clutter
 
 and then
 

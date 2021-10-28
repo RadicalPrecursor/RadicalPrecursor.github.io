@@ -1,0 +1,35 @@
+---
+---
+
+@import "minima";
+
+header {
+  color: #bfabcc;
+  background-color: #b5d1cc;
+}
+
+a {
+  color: #FFCFC4;
+}
+
+body {
+  color: #6b4e7e;
+  background-color: whitesmoke;
+
+}
+
+footer {
+  color: #b5d1cc;
+  background-color: #b5d1cc;
+}
+
+canvas {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  padding: 20px;
+  text-align: center;
+}

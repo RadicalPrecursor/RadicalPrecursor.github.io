@@ -58,6 +58,7 @@ var particles = [];
 var desks = [];
 
 function setup() {
+  // edit canvas size here
   canvas = createCanvas(360, 360, WEBGL);
   canvas.parent('scatter');
   frameRate(5);
