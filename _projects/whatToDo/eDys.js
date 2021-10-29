@@ -87,7 +87,7 @@ function getRandomInt(max) {
 var len = wisdom.length;
 
 function draw() {
-  var c1 = color('#b5d1cc);
+  var c1 = color('#b5d1cc');
   background(c1);
   desks[0].createDesk();
 
