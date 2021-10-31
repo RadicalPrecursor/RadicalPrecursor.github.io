@@ -5,6 +5,9 @@ function preload() {
   font = loadFont('assets/SourceSansPro-Regular.otf');
 }
 
+var canvasX = 720;
+var canvasY = 560;
+
 class Desk {
   constructor(){
     this.message = wisdom[getRandomInt(len)];
@@ -40,8 +43,8 @@ class Particle {
     rect(this.x, this.y, this.w, this.h);
   }
   moveParticle() {
-    var mouseXadj = mouseX - 180;
-    var mouseYadj = mouseY - 180;
+    var mouseXadj = mouseX - (canvasX/2);
+    var mouseYadj = mouseY - (canvasY/2);
     var dis = dist(this.x, this.y, mouseXadj, mouseYadj);
     if(dis < 20){
       this.xSpeed = this.x - mouseXadj;
@@ -59,7 +62,7 @@ var desks = [];
 
 function setup() {
   // edit canvas size here
-  canvas = createCanvas(360, 360, WEBGL);
+  canvas = createCanvas(canvasX, canvasY, WEBGL);
   canvas.parent('scatter');
   frameRate(5);
   rectMode(CENTER);
@@ -90,6 +93,8 @@ function draw() {
   var c1 = color('#b5d1cc');
   background(c1);
   desks[0].createDesk();
+  console.log(mouseX);
+  console.log(mouseY);
 
   for (var i=0; i<particles.length; i++){
     particles[i].createParticle();

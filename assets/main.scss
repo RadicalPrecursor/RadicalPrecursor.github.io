@@ -8,14 +8,9 @@ header {
   background-color: #b5d1cc;
 }
 
-a {
-  color: #FFCFC4;
-}
-
 body {
   color: #6b4e7e;
   background-color: whitesmoke;
-
 }
 
 footer {
@@ -23,13 +18,32 @@ footer {
   background-color: #b5d1cc;
 }
 
+.a {
+  padding: 5%;
+  width: 660px;
+  height: 40px;
+  margin-left: 0px;
+}
+
+.b {
+  padding: 5%;
+  width: 660px;
+  height: 20px;
+  margin-left: 0px;
+}
+
+.c {
+  padding: 5%;
+  width: 660px;
+  height: 700px;
+}
+
 canvas {
-  position: absolute;
+  position: relative;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   width: 50%;
   height: 50%;
-  padding: 20px;
   text-align: center;
 }
