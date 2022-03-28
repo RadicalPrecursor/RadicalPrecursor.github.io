@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Theory and Technique of Electronic Music Notes and Math"
 description: some notes and JavaScript converters accompanying the reading of Theory and Technique of Electronic Music
 date: 2021-10-02
